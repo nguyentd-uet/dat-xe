@@ -1,0 +1,36 @@
+.my-container {
+  position: relative;
+  background: black;
+  overflow: hidden; }
+  .my-container h3 {
+    padding: 50px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff; }
+  .my-container .service-text {
+    padding: 50px;
+    z-index: 2;
+    position: relative;
+    margin-top: -50px;
+    color: #fff; }
+    .my-container .service-text i {
+      font-size: 10px; }
+  .my-container .form-inline {
+    padding: 5px;
+    text-align: center;
+    width: 100%; }
+    .my-container .form-inline > * {
+      margin: 15px 3px !important; }
+    .my-container .form-inline :first-child {
+      margin-left: 5% !important; }
+    .my-container .form-inline .form-control {
+      width: 100% !important; }
+  .my-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.6; }
