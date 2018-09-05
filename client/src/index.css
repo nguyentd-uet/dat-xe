@@ -8,6 +8,8 @@ html {
     margin-bottom: 666px; }
     html body .header {
       background-color: #f8f9fa; }
+    html body main {
+      padding-bottom: 18px; }
     html body .footer {
       position: absolute;
       bottom: 0;
