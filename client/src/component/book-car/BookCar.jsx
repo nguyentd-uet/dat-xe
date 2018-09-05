@@ -8,7 +8,7 @@ export default class BookCar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      step: 3
+      step: 1
     }
     this.onChangeStep = this.onChangeStep.bind(this)
     this.onClickStep = this.onClickStep.bind(this)
