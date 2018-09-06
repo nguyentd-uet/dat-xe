@@ -28,8 +28,9 @@
       text-align: center;
       pointer-events: none;
       color: #aaa; }
-    .my-container .service-text .form-row .marginLeft5 {
-      margin-left: 5% !important; }
+    @media screen and (min-width: 768px) {
+      .my-container .service-text .form-row #dia-chi-don {
+        margin-left: 5%; } }
     .my-container .service-text .form-row .btn-xem-gia {
       width: 100%;
       background: linear-gradient(40deg, #ff6ec4, #7873f5) !important; }

@@ -8,12 +8,12 @@ export default class Step2 extends Component {
     return (
       <div className='row'>
         <div className="col-md-8">
-          <div className="form-group row">
-            <div className="col-md-6">
+          <div className="form-group row mb-0">
+            <div className="col-md-6 mb-3">
               <span className="fas fa-user form-control-icon"></span>
               <input type="text" className="form-control" placeholder="Họ và tên" />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mb-3">
               <span className="fas fa-phone form-control-icon"></span>
               <input type="text" className="form-control" placeholder="Số điện thoại liên hệ" />
             </div>
@@ -50,27 +50,27 @@ export default class Step2 extends Component {
             <input type="checkbox" className="custom-control-input" checked/>
             <label className="custom-control-label">Xuất hóa đơn (Giá bao gồm hóa đơn VAT sẽ cộng 10%)</label>
           </div>
-          <div className="form-group row">
-            <div className="col-md-6">
+          <div className="form-group row mb-0">
+            <div className="col-md-6 mb-3">
               <span className="fas fa-user form-control-icon"></span>
               <input type="text" className="form-control" placeholder="Tên công ty" />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mb-3">
               <span className="fas fa-building form-control-icon"></span>
               <input type="text" className="form-control" placeholder="Địa chỉ công ty" />
             </div>
           </div>
-          <div className="form-group row">
-            <div className="col-md-6">
+          <div className="form-group row mb-0">
+            <div className="col-md-6 mb-3">
               <span className="fas fa-money-check form-control-icon"></span>
               <input type="text" className="form-control" placeholder="Mã số thuế" />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mb-3">
               <span className="fas fa-map-marked-alt form-control-icon"></span>
               <input type="text" className="form-control" placeholder="Địa chỉ nhận hóa đơn" />
             </div>
           </div>
-          <button className='btn btn-danger btn-block' onClick={() => this.onClickBtn()}>Hoàn tất</button>
+          <button className='btn btn-danger btn-block mb-3' onClick={() => this.onClickBtn()}>Hoàn tất</button>
         </div>
         <div className="col-md-4">
           <div className='border p-2 mb-2'>

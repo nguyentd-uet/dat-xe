@@ -35,7 +35,7 @@ export default class Step1 extends Component {
                         <input type="text" className="form-control" placeholder='Số xe' />
                     </div>
                     <button className='btn btn-danger mb-3' style={{ width: '100%' }}>Đi xe riêng</button>
-                    <button className='btn btn-outline-primary' style={{ width: '100%' }}>Đi chung xe</button>
+                    <button className='btn btn-outline-primary mb-3' style={{ width: '100%' }}>Đi chung xe</button>
                 </div>
                 <div className="col-md-8 border-left">
                     <table className="table table-bordered text-center mb-5">

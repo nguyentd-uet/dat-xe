@@ -33,7 +33,7 @@ export default class Home extends Component {
                     </div>
                     <div className="row service-text">
                         <div className="form-row" style={{width: '100%'}}>
-                            <div className={"col-md-3 " + (window.innerWidth >= 768 ? 'marginLeft5' : '')}>
+                            <div className="col-md-3" id='dia-chi-don'>
                                 <div className="form-group">
                                     <span className="fas fa-map-marker-alt form-control-icon text-primary"></span>
                                     <input type="text" className="form-control" placeholder="Địa chỉ đón"/>
@@ -52,7 +52,7 @@ export default class Home extends Component {
                                 </div>
                             </div>
                             <div className="col-md-2">
-                                <button className='btn btn-xem-gia' onClick={this.onClickXemGiaBtn.bind(this)}>XEM GIÁ</button>
+                                <button className='btn btn-xem-gia text-light' onClick={this.onClickXemGiaBtn.bind(this)}>XEM GIÁ</button>
                             </div>
                         </div>
                     </div>

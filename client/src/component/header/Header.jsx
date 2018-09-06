@@ -7,7 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button,
   Media
 } from 'reactstrap';
 
@@ -42,10 +41,10 @@ export default class Header extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="#"><Button color="danger">Đặt xe ngay</Button></NavLink>
+                  <NavLink href="#"><button className="btn btn-outline-danger">Đặt xe ngay</button></NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#"><Button color="primary">Đi chung xe</Button></NavLink>
+                  <NavLink href="#"><button className="btn btn-outline-primary">Đi chung xe</button></NavLink>
                 </NavItem>
                 <NavItem>
                   <Media>

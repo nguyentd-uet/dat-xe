@@ -18,6 +18,9 @@
   border-top-right-radius: 5px;
   list-style: none;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    #book-car #smartwizard ul.step-anchor {
+      background: #ddd !important; } }
   #book-car #smartwizard ul.step-anchor li:first-child a {
     padding-left: 15px; }
   #book-car #smartwizard ul.step-anchor li.done a {
@@ -26,18 +29,36 @@
     background: #9cb2f5 !important; }
     #book-car #smartwizard ul.step-anchor li.done a :after {
       border-left: 30px solid #9cb2f5; }
-  #book-car #smartwizard ul.step-anchor li {
-    width: 20%; }
-    #book-car #smartwizard ul.step-anchor li a {
-      color: #bbb;
-      text-decoration: none;
-      padding: 10px 0 10px 45px;
-      position: relative;
-      display: block;
-      border: 0 !important;
-      border-radius: 0;
-      outline-style: none;
-      background: #f5f5f5; }
+  @media screen and (max-width: 512px) {
+    #book-car #smartwizard ul.step-anchor li {
+      width: 50%;
+      float: none !important; } }
+  @media screen and (max-width: 768px) and (min-width: 513px) {
+    #book-car #smartwizard ul.step-anchor li {
+      width: 33.33%;
+      float: none !important; } }
+  @media screen and (min-width: 769px) {
+    #book-car #smartwizard ul.step-anchor li {
+      width: 25%; } }
+  #book-car #smartwizard ul.step-anchor li a {
+    color: #bbb;
+    text-decoration: none;
+    padding: 10px 0 10px 45px;
+    position: relative;
+    display: block;
+    border: 0 !important;
+    border-radius: 0;
+    outline-style: none;
+    background: #f5f5f5; }
+    @media screen and (max-width: 768px) {
+      #book-car #smartwizard ul.step-anchor li a {
+        padding-left: 15px;
+        margin-right: 0;
+        margin-bottom: 1px; } }
+    @media screen and (max-width: 512px) {
+      #book-car #smartwizard ul.step-anchor li a {
+        padding: 10px 0 10px 15px !important; } }
+    @media screen and (min-width: 769px) {
       #book-car #smartwizard ul.step-anchor li a :before {
         content: " ";
         display: block;
@@ -64,7 +85,7 @@
         top: 50%;
         margin-top: -50px;
         left: 100%;
-        z-index: 2; }
+        z-index: 2; } }
   #book-car #smartwizard ul.step-anchor li.active a {
     border-color: #007bff !important;
     color: #fff !important;
