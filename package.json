@@ -6,7 +6,7 @@
   "author": "nguyen.td1501@gmail.com",
   "license": "MIT",
   "engines": {
-    "node": ">=8.11.1"
+    "node": "8.11.x"
   },
   "dependencies": {
     "concurrently": "^3.6.1"
