@@ -3,18 +3,18 @@
 html {
   position: relative;
   min-height: 100%; }
-  html body {
+  html body .header {
+    background-color: #f8f9fa; }
+  html body main {
+    padding-bottom: 18px; }
+  html body .App {
     /* Margin bottom by footer height */
     margin-bottom: 666px; }
-    html body .header {
-      background-color: #f8f9fa; }
-    html body main {
-      padding-bottom: 18px; }
-    html body .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      /* Set the fixed height of the footer here */
-      height: 666px; }
-    html body .text-yellow {
-      color: yellow; }
+  html body .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 666px; }
+  html body .text-yellow {
+    color: yellow; }

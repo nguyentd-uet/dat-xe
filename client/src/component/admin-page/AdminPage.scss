@@ -1,0 +1,14 @@
+#header-admin {
+    .sidebar-toggle {
+        padding: 0;
+    }
+    .sidebar-toggle::before {
+        content: '' !important;
+    }
+
+    .user-panel {
+        .info {
+            padding: 0;
+        }
+    }
+}

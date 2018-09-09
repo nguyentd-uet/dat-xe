@@ -4,13 +4,15 @@ html {
   position: relative;
   min-height: 100%;
   body {
-    /* Margin bottom by footer height */
-    margin-bottom: 666px;
     .header {
       background-color: #f8f9fa;
     }
     main {
       padding-bottom: 18px;
+    }
+    .App {
+      /* Margin bottom by footer height */
+      margin-bottom: 666px;
     }
     .footer {
       position: absolute;

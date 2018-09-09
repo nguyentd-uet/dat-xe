@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import dxImg from '../../assets/images/5_loi_ich.png'
+import dxImg from '../../../assets/images/5_loi_ich.png'
 
 export default class Footer extends Component {
     render() {
