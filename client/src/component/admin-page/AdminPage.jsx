@@ -5,35 +5,52 @@ import Header from './Header'
 import SideBar from './SideBar'
 import Content from './Content'
 import './AdminPage.css'
+import Login from './Login'
 
 class AdminPage extends Component {
+    state = {
+        isLogin: false
+    }
+
+    login() {
+        this.setState({isLogin: true})
+    }
+
+    logout() {
+        this.setState({isLogin: false})
+        this.props.history.push('/admin')
+    }
+
     render() {
+        const {isLogin} = this.state
         const {match} = this.props
-        return (
-            <div className="wrapper">
-                <AuthProvider>
-                    {/* <main role="main" className="container">
-                        
-                    </main> */}
-                    <Header {...this.props} />
-                    <SideBar />
-                    <Content />
-                    {/* <main role="main" className="container">
-                        <Route exact path={`${match.url}/login`} component={loginView}/>
-                        <Route path={`${match.url}/users`} component={userView}/>
-                    </main> */}
-                </AuthProvider>
-            </div>
-        );
+
+        if (isLogin) {
+            return (
+                <div className="wrapper">
+                    <AuthProvider>
+                        <Header {...this.props} logout={this.logout.bind(this)} />
+                        <SideBar />
+                        {/* <Content /> */}
+
+                        <div className="content-wrapper">
+                            <section className="content-header">
+                                <Route exact path={`${match.url}/prices`} component={priceView}/>
+                                <Route path={`${match.url}/users`} component={userView}/>
+                            </section>
+                        </div>
+                    </AuthProvider>
+                </div>
+            )
+        }
+        return <Login login={this.login.bind(this)}/>;
     }
 }
-
-const loginView = () => {
-    return <h1>login view</h1>
+const priceView = () => {
+    return <h1>price view</h1>
 }
 
 const userView = () => {
     return <h1>user view</h1>
 }
-
 export default AdminPage;

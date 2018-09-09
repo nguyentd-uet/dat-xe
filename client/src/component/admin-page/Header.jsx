@@ -18,6 +18,11 @@ export default class Header extends Component {
         });
     }
 
+    onLogoutBtnClick(e) {
+        e.preventDefault()
+        this.props.logout()
+    }
+
     render() {
         return (
             <header className="main-header" id='header-admin'>
@@ -33,31 +38,8 @@ export default class Header extends Component {
                     <div className="navbar-custom-menu">
                         <ul className="nav navbar-nav">
                             <li className="dropdown messages-menu">
-                                {/* <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                    <i className="fas fa-envelope"></i>
-                                    <span className="label label-success">4</span>
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li className="header">You have 4 messages</li>
-                                    <li>
-                                        <ul className="menu">
-                                            <li>
-                                                <a href="#">
-                                                    <div className="pull-left">
-                                                        <img src={avatar} className="img-circle" alt="User Image" />
-                                                    </div>
-                                                    <h4>
-                                                        Support Team
-                                                        <small><i className="fa fa-clock-o"></i> 5 mins</small>
-                                                    </h4>
-                                                    <p>Why not buy a new awesome theme?</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul> */}
                                 <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                                    <DropdownToggle caret color="primary" style={{padding: '5px 12px 6px 12px', border: '0'}}>
+                                    <DropdownToggle caret style={{padding: '5px 12px 6px 12px', border: '0', backgroundColor: '#3c8dbc'}}>
                                         <i className="fas fa-envelope"></i>
                                         <Badge color="success">4</Badge>
                                     </DropdownToggle>
@@ -77,6 +59,20 @@ export default class Header extends Component {
                                         </DropdownItem>
                                     </DropdownMenu>
                                 </ButtonDropdown>
+
+                                <button href="#" className='btn' 
+                                    style={{
+                                        padding: '5px 12px 6px 12px', 
+                                        border: '0', 
+                                        backgroundColor: '#3c8dbc', 
+                                        textDecoration: 'none', 
+                                        color: 'white'
+                                    }}
+                                    onClick={this.onLogoutBtnClick.bind(this)}
+                                >
+                                    Logout {' '}
+                                    <i className="fas fa-sign-out-alt"></i>
+                                </button>
                             </li>
                         </ul>
                     </div>
