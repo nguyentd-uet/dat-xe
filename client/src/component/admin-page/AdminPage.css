@@ -1,8 +1,8 @@
-#header-admin .sidebar-toggle {
-  padding: 0; }
-
-#header-admin .sidebar-toggle::before {
-  content: '' !important; }
-
-#header-admin .user-panel .info {
-  padding: 0; }
+.wrapper {
+  font-size: 14px; }
+  .wrapper #header-admin .sidebar-toggle {
+    padding: 0; }
+  .wrapper #header-admin .sidebar-toggle::before {
+    content: '' !important; }
+  .wrapper #header-admin .user-panel .info {
+    padding: 0; }

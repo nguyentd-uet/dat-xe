@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Login extends Component {
     render() {
         return (
-            <div className="login-box">
+            <div className="login-box" style={{border: '1px solid #ddd'}}>
                 <div className="login-logo">
                     <a href="#"><b>Admin</b>LTE</a>
                 </div>

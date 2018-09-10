@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import avatar from '../../assets/images/user2_160x160.jpg'
-import { Link } from 'react-router-dom'
+import { NavLink, withRouter, Link } from 'react-router-dom'
 
 export default class SideBar extends Component {
     render(){
@@ -27,15 +27,22 @@ export default class SideBar extends Component {
                     </form>
                     <ul className="sidebar-menu" data-widget="tree">
                         <li className="header">MAIN NAVIGATION</li>
-                        <li>
-                            <Link to='/admin/prices'><i className="fas fa-dollar-sign"></i> <span>Prices</span></Link>
-                        </li>
-                        <li>
-                            <Link to='/admin/users'><i className="fa fa-users"></i> <span>Users</span></Link>
-                        </li>
+                        {/* <NavLink activeClassName="active" to='/admin/prices'><i className="fas fa-dollar-sign"></i> <span>Prices</span></NavLink> */}
+                        <NavItem to='/admin/dashboard'><i className="fas fa-tachometer-alt"></i> <span>Dashboard</span></NavItem> 
+                        <NavItem to='/admin/prices'><i className="fas fa-dollar-sign"></i> <span>Prices</span></NavItem> 
+                        <NavItem to='/admin/users'><i className="fa fa-users"></i> <span>Users</span></NavItem>
                     </ul>
                 </section>
             </aside> 
         )
     }
 }
+
+const NavItem = withRouter((props) => {
+    const { to, children, location } = props;
+    return (
+        <li className={location.pathname == to ? 'active' : null}>
+            <Link to={to}>{children}</Link >
+        </li>
+    )
+});

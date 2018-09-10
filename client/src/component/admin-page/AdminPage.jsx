@@ -14,6 +14,7 @@ class AdminPage extends Component {
 
     login() {
         this.setState({isLogin: true})
+        this.props.history.push('/admin/dashboard')
     }
 
     logout() {
@@ -33,9 +34,10 @@ class AdminPage extends Component {
                         <SideBar />
                         {/* <Content /> */}
 
-                        <div className="content-wrapper">
+                        <div className="content-wrapper" style={{minHeight: window.innerHeight - 51}}>
                             <section className="content-header">
-                                <Route exact path={`${match.url}/prices`} component={priceView}/>
+                                <Route exact path={`${match.url}/dashboard`} component={dashboardView}/>
+                                <Route path={`${match.url}/prices`} component={priceView}/>
                                 <Route path={`${match.url}/users`} component={userView}/>
                             </section>
                         </div>
@@ -52,5 +54,9 @@ const priceView = () => {
 
 const userView = () => {
     return <h1>user view</h1>
+}
+
+const dashboardView = () => {
+    return <h1>dashboard view</h1>
 }
 export default AdminPage;
