@@ -4,7 +4,8 @@ import './Home.css'
 export default class Home extends Component {
 
     onClickXemGiaBtn() {
-        this.props.history.push('/dat-xe');
+        let {match, history} = this.props;
+        history.push(`${match.url}/dat-xe`);
     }
     render() {
         return (
