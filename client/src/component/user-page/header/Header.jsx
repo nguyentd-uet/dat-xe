@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   Media
 } from 'reactstrap';
 import { Link, withRouter } from 'react-router-dom'
@@ -29,7 +28,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className='shadow-sm bg-light header-user-page'>
-        <div className="container">
+        <div className="">
           <Navbar color="light" light expand="md">
             <NavbarBrand href="/">
               <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
@@ -39,19 +38,13 @@ export default class Header extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="mr-auto" navbar>
                 <NavItem2 to='/home'>Trang chủ</NavItem2>
-                <NavItem2 to='/prices'>Bảng giá</NavItem2>
-                <NavItem2 to='/cars'>Các dòng xe</NavItem2>
-                <NavItem2 to='/about-us'>Về chúng tôi</NavItem2>
-                <NavItem2 to='/news'>Tin tức</NavItem2>
-                <NavItem2 to='/contact'>Liên hệ</NavItem2>
+                <NavItem2 to='/home/prices'>Bảng giá</NavItem2>
+                <NavItem2 to='/home/cars'>Các dòng xe</NavItem2>
+                <NavItem2 to='/home/about-us'>Về chúng tôi</NavItem2>
+                <NavItem2 to='/home/news'>Tin tức</NavItem2>
+                <NavItem2 to='/home/contact'>Liên hệ</NavItem2>
               </Nav>
               <Nav className="ml-auto" navbar>
-                {/* <NavItem>
-                  <NavLink href="#"><button className="btn btn-outline-danger">Đặt xe ngay</button></NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#"><button className="btn btn-outline-primary">Đi chung xe</button></NavLink>
-                </NavItem> */}
                 <NavItem>
                   <Media>
                     <Media left>
@@ -70,7 +63,7 @@ export default class Header extends Component {
                     </Media>
                   </Media>
                 </NavItem>
-                <NavItem className='mt-2 ml-4 mr-2'>
+                <NavItem className='mt-2 mx-2'>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/New_Logo_Gmail.svg/1200px-New_Logo_Gmail.svg.png" width="30" height="30" alt=""></img>
                 </NavItem>
                 <NavItem className='mt-2 mx-2'>
@@ -91,7 +84,7 @@ export default class Header extends Component {
 const NavItem2 = withRouter((props) => {
   const { to, children, location } = props;
   return (
-      <li className={'nav-item ' + (location.pathname == to ? 'active' : null)}>
+      <li className={'nav-item ' + (location.pathname === to ? 'active' : null)}>
           <Link className='nav-link' to={to}>{children}</Link >
       </li>
   )

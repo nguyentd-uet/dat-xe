@@ -1,0 +1,19 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #6f7378;
+  color: white; }
+  .footer .hr-line {
+    width: 60%;
+    margin-left: 0;
+    border-top: 1px solid #fff; }
+  .footer ul.list-social {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: .5rem; }
+    .footer ul.list-social :first-child {
+      margin-left: 0 !important; }
+    .footer ul.list-social li {
+      display: inline;
+      margin-left: 20px; }

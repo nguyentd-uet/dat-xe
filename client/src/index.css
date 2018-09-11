@@ -9,12 +9,8 @@ html {
     padding-bottom: 18px; }
   html body .App {
     /* Margin bottom by footer height */
-    margin-bottom: 666px; }
+    margin-bottom: 242px; }
   html body .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 666px; }
+    /* Set the fixed height of the footer here */ }
   html body .text-yellow {
     color: yellow; }

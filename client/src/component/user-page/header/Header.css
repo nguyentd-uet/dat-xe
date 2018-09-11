@@ -1,2 +1,5 @@
+.header-user-page .nav-item .nav-link {
+  color: black; }
+
 .header-user-page .active .nav-link {
   color: #00c0ef !important; }

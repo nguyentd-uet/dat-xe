@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom'
-import { AuthProvider } from '../../context/AuthContext';
 import Header from './Header'
 import SideBar from './SideBar'
 import Content from './Content'
@@ -29,19 +28,17 @@ class AdminPage extends Component {
         if (isLogin) {
             return (
                 <div className="wrapper">
-                    <AuthProvider>
-                        <Header {...this.props} logout={this.logout.bind(this)} />
-                        <SideBar />
-                        {/* <Content /> */}
+                    <Header {...this.props} logout={this.logout.bind(this)} />
+                    <SideBar />
+                    {/* <Content /> */}
 
-                        <div className="content-wrapper" style={{minHeight: window.innerHeight - 51}}>
-                            <section className="content-header">
-                                <Route exact path={`${match.url}/dashboard`} component={dashboardView}/>
-                                <Route path={`${match.url}/prices`} component={priceView}/>
-                                <Route path={`${match.url}/users`} component={userView}/>
-                            </section>
-                        </div>
-                    </AuthProvider>
+                    <div className="content-wrapper" style={{minHeight: window.innerHeight - 51}}>
+                        <section className="content-header">
+                            <Route exact path={`${match.url}/dashboard`} component={dashboardView}/>
+                            <Route path={`${match.url}/prices`} component={priceView}/>
+                            <Route path={`${match.url}/users`} component={userView}/>
+                        </section>
+                    </div>
                 </div>
             )
         }

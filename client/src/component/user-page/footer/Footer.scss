@@ -1,0 +1,25 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // line-height: 60px; /* Vertically center the text there */
+    background-color: #6f7378;
+    color: white;
+    .hr-line {
+        width: 60%;
+        margin-left: 0;
+        border-top: 1px solid #fff;
+    }
+    ul.list-social {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: .5rem;
+        :first-child {
+            margin-left: 0 !important;
+        }
+        li {
+            display: inline;
+            margin-left: 20px;
+        }
+    }
+  }

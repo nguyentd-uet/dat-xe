@@ -1,0 +1,31 @@
+.home-page .my-container {
+  position: relative;
+  background: white;
+  overflow: hidden; }
+  .home-page .my-container h3 {
+    padding: 30px;
+    text-align: center;
+    z-index: 2;
+    position: relative; }
+  .home-page .my-container .service-text {
+    padding: 50px;
+    z-index: 2;
+    position: relative;
+    margin-top: -50px; }
+  .home-page .my-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.9; }
+
+.home-page table tr th, .home-page table tr td {
+  width: 25%;
+  border-color: black !important; }
+
+.home-page .card {
+  border: none; }
+  .home-page .card .card-body {
+    padding: 1.25rem 0; }
