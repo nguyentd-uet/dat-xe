@@ -3,9 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var db = require('./services/dbConnect');
 
 var indexRouter = require('./routes/index');
-var exportRouter = require('./routes/export');
+var userRouter = require('./routes/user');
 
 var app = express();
 
@@ -19,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/api', indexRouter);
-app.use('/api/export', exportRouter);
+app.use('/api/user', userRouter);
 
 // any routes not picked up by the server api will be handled by the react router
 app.use('/*', staticFiles)
@@ -30,19 +31,21 @@ app.use('/*', staticFiles)
 // });
 
 // error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+// app.use(function(err, req, res, next) {
+//   // set locals, only providing error in development
+//   res.locals.message = err.message;
+//   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+//   // render the error page
+//   res.status(err.status || 500);
+//   res.render('error');
+// });
 
 app.set('port', (process.env.PORT || 3001))
 app.listen(app.get('port'), () => {
   console.log(`Listening on ${app.get('port')}`)
 })
+
+db.connectMongoDb();
 
 module.exports = app;
